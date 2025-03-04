@@ -1,0 +1,133 @@
+{
+  "name": "work-time-tracker",
+  "title": "Work Time Tracker",
+  "description": "Track your work hours and calculate total time",
+  "icon": "icon.png",
+  "author": "Victor Bark",
+  "categories": ["Testing"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Track Work Time",
+      "description": "Start or stop your work timer",
+      "mode": "view"
+    },
+    {
+      "name": "toggle-timer",
+      "title": "Toggle Work Timer",
+      "description": "Quickly start or stop your work timer",
+      "mode": "no-view"
+    },
+    {
+      "name": "start-custom-time",
+      "title": "Start Timer with Custom Time",
+      "description": "Start your work timer with a custom start time",
+      "mode": "view"
+    },
+    {
+      "name": "index",
+      "title": "Track Work Time",
+      "description": "Start or stop your work timer",
+      "mode": "view"
+    },
+    {
+      "name": "toggle-timer",
+      "title": "Toggle Work Timer",
+      "description": "Quickly start or stop your work timer",
+      "mode": "no-view"
+    },
+    {
+      "name": "index",
+      "title": "Track Work Time",
+      "description": "Start or stop your work timer",
+      "mode": "view"
+    },
+    {
+      "name": "calendar",
+      "title": "Work Calendar",
+      "description": "View your work time in a calendar",
+      "mode": "view"
+    },
+    {
+      "name": "export",
+      "title": "Export Work Data",
+      "description": "Export your work time data as CSV or JSON",
+      "mode": "view"
+    },
+    {
+      "name": "settings",
+      "title": "Work Time Settings",
+      "description": "Configure your work time preferences",
+      "mode": "view"
+    },
+    {
+      "name": "reports",
+      "title": "Work Time Reports",
+      "description": "View reports and analytics of your work patterns",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "defaultTargetHours",
+      "title": "Default Daily Target (hours)",
+      "description": "Default number of hours you should work each day",
+      "type": "textfield",
+      "required": true,
+      "default": "8"
+    },
+    {
+      "name": "enableStartReminder",
+      "title": "Enable Start Reminder",
+      "description": "Remind you to start your work timer",
+      "type": "checkbox",
+      "required": false,
+      "default": true
+    },
+    {
+      "name": "startReminderTime",
+      "title": "Start Reminder Time",
+      "description": "Time to remind you to start working (HH:MM)",
+      "type": "textfield",
+      "required": false,
+      "default": "08:00"
+    },
+    {
+      "name": "enableStopReminder",
+      "title": "Enable Stop Reminder",
+      "description": "Remind you to stop your work timer",
+      "type": "checkbox",
+      "required": false,
+      "default": true
+    },
+    {
+      "name": "stopAfterHours",
+      "title": "Stop Reminder After (hours)",
+      "description": "Remind you to stop working after this many hours",
+      "type": "textfield",
+      "required": false,
+      "default": "8"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.55.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "^18.8.3",
+    "@types/react": "^18.0.9",
+    "@types/uuid": "^9.0.1",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
